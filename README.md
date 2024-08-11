@@ -1,10 +1,10 @@
-This is pendulum made in cpp using SDL2
+This is Conway's Game of life made in cpp using SDL2
 
-Libs and include files are only complatable with Windows.
+Libs and include files are only complatable with minGW compiler.
 
 To compile files run
 
-(Makefile can be installed with "choco" package manager) 
+(Makefile can be installed with "choco" package manager for Windows) 
 ```bash
 git clone https://github.com/boce1/pendulum_c.git
 make
@@ -16,11 +16,9 @@ make clean
 ```
 
 ### Instruction
-Lenght of the pendulum can be changed with "up arrow" and "down arrow".
+With left mouse click user can make cell alive or dead.
 
-Up arrow incresses lenght, down arrow decressed lenght of the pendulum.
+With right mouse click user can start/stop simulation.
 
-Agnle can be changed wiht "left arrow" and "right arrow".
-
-Info about lenght of the string and angle can be displayed in terminal with pressing "Space".
+With scrool user can scale the scene. Note: every alive cell will be deleted.
 
