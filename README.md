@@ -22,3 +22,4 @@ With right mouse click user can start/stop simulation.
 
 With scrool user can scale the scene. Note: every alive cell will be deleted.
 
+By pressing keys "1", "2", "3", "4" user can change speed of simulation. (1 is the slowest, 4 is the fastest)
