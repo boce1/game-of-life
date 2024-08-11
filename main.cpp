@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
         {
             SDL_Delay(delay * delayCoef);
         }    
-    
+        std::cout << delayCoef << "\n";
         SDL_GetMouseState(&mouse_x, &mouse_y);
 
         draw(renderer, cells);
@@ -243,13 +243,13 @@ void changeSpeed(SDL_Event &event, int &speedCoef)
     {
         switch (event.key.keysym.sym) {
             case SDLK_1:
-                speedCoef = 4;
+                speedCoef = 7;
                 break;
             case SDLK_2:
-                speedCoef = 3;
+                speedCoef = 5;
                 break;
             case SDLK_3:
-                speedCoef = 2;
+                speedCoef = 3;
                 break;
             case SDLK_4:
                 speedCoef = 1;
