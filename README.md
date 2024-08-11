@@ -6,7 +6,7 @@ To compile files run
 
 (Makefile can be installed with "choco" package manager for Windows) 
 ```bash
-git clone https://github.com/boce1/pendulum_c.git
+git clone https://github.com/boce1/game-of-life.git
 make
 ```
 
