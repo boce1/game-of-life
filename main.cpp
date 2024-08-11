@@ -16,6 +16,7 @@ void cellLife(std::vector<cell> &cells, const int &numRow, const bool &simulatio
 void toggleSimulation(SDL_Event &event, bool &flag);
 void updateScale(std::vector<cell> &cells, int &cellNumRow, int &cellWidth);
 void changeScale(SDL_Event &event, std::vector<cell> &cells, int &cellNumRow, int &cellWidth);
+void changeSpeed(SDL_Event &event, int &speedCoef);
 
 int main(int argc, char* argv[]) 
 {
@@ -45,7 +46,7 @@ int main(int argc, char* argv[])
     Uint64 nowTicks = SDL_GetPerformanceCounter();
     Uint64 lastTicks = 0;
     double deltaTime = 0;
-    int delayCoef = 2;
+    int delayCoef = 4;
 
     bool simulationFlag = false;
 
@@ -74,6 +75,7 @@ int main(int argc, char* argv[])
             changeStateCell(event, mouse_x, mouse_y, cellWidth, cellNumRow, cells);
             toggleSimulation(event, simulationFlag);
             changeScale(event, cells, cellNumRow, cellWidth);
+            changeSpeed(event, delayCoef);
         }
     }
 
@@ -235,6 +237,27 @@ void changeScale(SDL_Event &event, std::vector<cell> &cells, int &cellNumRow, in
     }
 }
 
-
+void changeSpeed(SDL_Event &event, int &speedCoef)
+{
+    if(event.type == SDL_KEYDOWN)
+    {
+        switch (event.key.keysym.sym) {
+            case SDLK_1:
+                speedCoef = 4;
+                break;
+            case SDLK_2:
+                speedCoef = 3;
+                break;
+            case SDLK_3:
+                speedCoef = 2;
+                break;
+            case SDLK_4:
+                speedCoef = 1;
+                break;
+            default:
+                break;
+        }   
+    }
+}
 
 
