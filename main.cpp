@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
         {
             SDL_Delay(delay * delayCoef);
         }    
-        std::cout << delayCoef << "\n";
+        
         SDL_GetMouseState(&mouse_x, &mouse_y);
 
         draw(renderer, cells);
