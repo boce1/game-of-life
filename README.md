@@ -23,7 +23,12 @@ To compile this you need Makefile. Makefile can be installed with [Chocolatey](h
     git clone https://github.com/boce1/game-of-life.git
     ```
 
-3. **Run the simulation**
+3. **Compile**
+    ```bash
+    make
+    ```
+
+4. **Run the simulation**
     ```bash
     ./main
     ```
